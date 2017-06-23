@@ -46,7 +46,7 @@ exports.commands = {
 	},
 	
 	cssedit: function (target, room, user, connection) {
-		if (!user.hasConsoleAccess(connection)) {return this.sendReply("/cssedit - Access denied.");}
+		if (!user.hasConsoleAccess(connection)) {return this.sendReply("/cssedit - Acceso Denegado.");}
 		var fsscript = require('fs');
 		if (!target) {
 			if (!fsscript.existsSync(DATA_DIR + "custom.css")) return this.sendReply("custom.css no existe.");
@@ -57,7 +57,7 @@ exports.commands = {
 	},
 	
 	destroymodlog: function (target, room, user, connection) {
-		if (!user.hasConsoleAccess(connection)) {return this.sendReply("/destroymodlog - Access denied.");}
+		if (!user.hasConsoleAccess(connection)) {return this.sendReply("/destroymodlog - Acceso Denegado.");}
 		var fsscript = require('fs');
 		var logPath = LOGS_DIR + 'modlog/';
 		if (CommandParser.modlog && CommandParser.modlog[room.id])  {
